@@ -71,7 +71,9 @@ EOF
         assert File.exist?('.rubocop.yml')
       end
     end
+  end
 
+  describe 'inside directory with existing rubocop configuration' do
     it "adds new cops to configuration" do
       inside_test_dir do
         write_test_config
